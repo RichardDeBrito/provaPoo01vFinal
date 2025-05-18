@@ -104,15 +104,15 @@ export class MissionControl {
             let typePlanet = '';
 
             switch (maxTemperature) {
-                case 0:
+                case 30:
                     typePlanet = 'IcePlanet';
                     break;
                 
-                case 80:
+                case 60:
                     typePlanet = 'GasPlanet';
                     break;
 
-                case 40:
+                case 50:
                     typePlanet = 'RockyPlanet';
                     break;
 

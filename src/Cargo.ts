@@ -10,17 +10,13 @@ export abstract class Cargo {
 }
 
 export class HeavyCargo extends Cargo {
-    private static initialWeight = 75;
-    
-    constructor(name: string, averangeIdealTemperature: number, radioationSensitivity: boolean){
-        super(name, HeavyCargo.initialWeight, averangeIdealTemperature, radioationSensitivity);
+    constructor(name: string, weight: number, averangeIdealTemperature: number, radioationSensitivity: boolean){
+        super(name, weight, averangeIdealTemperature, radioationSensitivity);
     }
 }
 
 export class LightCargo extends Cargo {
-    private static initialWeight = 20;
-
-    constructor(name: string, averangeIdealTemperature: number, radioationSensitivity: boolean){
-        super(name, LightCargo.initialWeight, averangeIdealTemperature, radioationSensitivity);
+    constructor(name: string, weight: number, averangeIdealTemperature: number, radioationSensitivity: boolean){
+        super(name, weight, averangeIdealTemperature, radioationSensitivity);
     }
 }

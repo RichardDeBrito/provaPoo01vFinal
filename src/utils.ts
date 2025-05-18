@@ -91,12 +91,12 @@ export function genereteRandomCargos(n: number) :Cargo[]{
 
         switch (sortition) {
             case 0:
-                let heavyCargo = new HeavyCargo(namesCargo[nameDrawn], Random(-50, 80), RandomBoolean());
+                let heavyCargo = new HeavyCargo(namesCargo[nameDrawn], Random(50, 100), Random(-10, 80), RandomBoolean());
                 cargos.push(heavyCargo);
                 break;
             
             case 1:
-                let lightCargo = new LightCargo(namesCargo[nameDrawn], Random(-50, 80), RandomBoolean());
+                let lightCargo = new LightCargo(namesCargo[nameDrawn], Random(20, 100), Random(-0, 40), RandomBoolean());
                 cargos.push(lightCargo);
                 break;
             
@@ -114,29 +114,16 @@ export function Random(min: number, max: number) :number {
 }
 
 export function RandomBoolean() :boolean {
-    let sortition = Random(0, 2);
+    let sortition = Random(0, 4);
 
-    if(sortition === 0){
+    if(sortition === 0) {
         return true;
+    } else if(sortition === 1) {
+        return false;
+    } else if (sortition === 2){
+        return false;
     } else {
         return false;
     }
-            
-}
-
-export function printCargoSummary(cargos: Cargo[]): void {
-  console.log("📦 Cargo Summary");
-  console.log("=".repeat(60));
-  console.log(
-    `${"Name".padEnd(25)} | ${"Weight (kg)".padEnd(12)} | ${"Temp (°C)".padEnd(12)} | Radiation`
-  );
-  console.log("-".repeat(60));
-
-  cargos.forEach(cargo => {
-    console.log(
-      `${cargo.name.padEnd(25)} | ` +
-      `${cargo.weight.toString().padEnd(12)} | ` +
-      `${cargo.averageIdealTemperature.toString().padEnd(12)} | `
-    );
-  });
+   
 }

@@ -52,7 +52,7 @@ export class Spacecraft {
 
 export class CargoShip extends Spacecraft {
     private static initialDistancePerLiter = 50;
-    private static initialCargoCapacity = 100;
+    private static initialCargoCapacity = 120;
     private static initialFuel =  1200;
 
     constructor(name: string){
@@ -62,7 +62,7 @@ export class CargoShip extends Spacecraft {
 
 export class ExplorationShip extends Spacecraft {
     private static initialDistancePerLiter = 80;
-    private static initialCargoCapacity = 50;
+    private static initialCargoCapacity = 90;
     private static initialFuel =  1500;
 
     constructor(name: string){
@@ -72,7 +72,7 @@ export class ExplorationShip extends Spacecraft {
 
 export class ExpeditionShip extends Spacecraft {
     private static initialDistancePerLiter = 65;
-    private static initialCargoCapacity = 70;
+    private static initialCargoCapacity = 100;
     private static initialFuel =  1350;
 
     constructor(name: string){

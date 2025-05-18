@@ -18,8 +18,8 @@ export abstract class Planet {
 }
 
 export class IcePlanet extends Planet {
-    private static initialMinTemperature = -50;
-    private static initialMaxTemperature = 0;
+    private static initialMinTemperature = -20;
+    private static initialMaxTemperature = 30;
     private static initialRadioactive = false;
 
     constructor(name: string, distanceFromEarth: number) {
@@ -28,8 +28,8 @@ export class IcePlanet extends Planet {
 }
 
 export class GasPlanet extends Planet {
-    private static initialMinTemperature = 20;
-    private static initialMaxTemperature = 80;
+    private static initialMinTemperature = -10;
+    private static initialMaxTemperature = 60;
     private static initialRadioactive = true;
 
     constructor(name: string, distanceFromEarth: number) {
@@ -38,9 +38,9 @@ export class GasPlanet extends Planet {
 }
 
 export class RockyPlanet extends Planet {
-    private static initialMinTemperature = -20;
-    private static initialMaxTemperature = 40;
-    private static initialRadioactive = false;
+    private static initialMinTemperature = -10;
+    private static initialMaxTemperature = 50;
+    private static initialRadioactive = true;
 
     constructor(name: string, distanceFromEarth: number) {
         super(name, distanceFromEarth, RockyPlanet.initialMaxTemperature, RockyPlanet.initialMinTemperature, RockyPlanet.initialRadioactive)
