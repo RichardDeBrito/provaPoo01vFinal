@@ -1,0 +1,19 @@
+{
+  "name": "prova01-poov3",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "cls && ts-node src/main.ts",
+    "build": "tsc"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "ts-node": "^10.9.2"
+  }
+}
